@@ -7,7 +7,6 @@ import ForgetPassword from "../features/auth/ForgetPassword";
 
 const Auth = () => {
   const [show, setShow] = useState(0);
-  console.log(setShow);
 
   return (
     <section className="flex items-center justify-center h-screen">
@@ -17,7 +16,9 @@ const Auth = () => {
           <MdOutlineHandshake size={40} className="text-red-500" />
           <h1 className="text-3xl font-semibold text-red-600">کَفِته</h1>
         </div>
+        <div>
         {show == 0 ? <Login /> : show == 1 ? <Register /> : <ForgetPassword />}
+        </div>
         <p className="text-center">
           با ورود به کَفِته ،{" "}
           <span className="font-semibold">قوانین کَفِته</span> را می‌پذیرم
